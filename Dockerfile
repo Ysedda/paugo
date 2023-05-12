@@ -9,4 +9,4 @@ RUN npm run build
 
 FROM alpine:3.17.0 AS production
 WORKDIR /app
-COPY --from=base /dist ./
+COPY --from=base /app/dist ./
