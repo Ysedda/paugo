@@ -1,0 +1,21 @@
+services:
+  app: 
+    build: 
+      context: /
+      dockerfile: Dockerfile
+    volumes: 
+      - app:/app
+
+  web:
+    image: nginx:1.23.2-alpine
+    depends_on:
+      - app
+    restart: always
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - app:/app:ro
+    ports:
+      - 6299:80
+
+volumes:
+  app:
