@@ -31,4 +31,4 @@ jobs:
           file: ./Dockerfile
           platforms: linux/arm/v7
           push: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.DOCKER_HUB_CLIENT_PROD_IMAGE_NAME }}:latest, ${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.DOCKER_HUB_CLIENT_PROD_IMAGE_NAME }}:${{ github.event.release.name }}, ${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.DOCKER_HUB_CLIENT_PROD_IMAGE_NAME }}:${{github.sha}}
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.DOCKER_HUB_CLIENT_PROD_IMAGE_NAME }}:latest, ${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.DOCKER_HUB_CLIENT_PROD_IMAGE_NAME }}, ${{ secrets.DOCKER_HUB_USERNAME }}/${{ secrets.DOCKER_HUB_CLIENT_PROD_IMAGE_NAME }}:${{github.sha}}
